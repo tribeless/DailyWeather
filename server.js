@@ -58,6 +58,6 @@ app.post("/", (req, res) => {
 
 })
 
-app.listen(host, () => {
+app.listen(process.env.PORT, () => {
     console.log(`Server running at port ${host}`);
 })
