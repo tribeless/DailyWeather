@@ -5,11 +5,13 @@
 }
 
 body {
-    background-color: yellow;
+    background: linear-gradient(to right, #ecf0f1, #7f8c8d);
 }
-
+.pnt-container{
+    margin-top: 50px;
+    
+}
 .btn-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    margin-left:70px;
 }

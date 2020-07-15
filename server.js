@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(path.join(__dirname, "public")));
 
 let appid = process.env.APPID;
-let host = process.env.HOST;
+let host = process.env.PORT;
 
 
 //setting and working with our routes
