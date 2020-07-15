@@ -6,6 +6,9 @@
 
 body {
     background: linear-gradient(to right, #ecf0f1, #7f8c8d);
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 .pnt-container{
     margin-top: 50px;
