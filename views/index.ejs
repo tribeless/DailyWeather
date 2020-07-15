@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForeCast</title>
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <!-- bootstrap  cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="row justify-content-center align-self-center">
+
+        <div class="main-container card justify-content-md-center" style="width: 18rem;">
+            <h1 class="big-hd card-header">Get Weather</h1>
+            <div class="form-container card-body">
+                <form action="/" method="post" class="form-inline">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <input type="text" name="citynames" class="cityNames form-control ">
+                    </div>
+                    <div class="btn-btn">
+                        <button type="submit" class="submit-btn btn btn-primary mb-2 btn-lg ">Check</button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="weather-info-container">
+                <% if(data !== null){%>
+                <ul class="list-group list-group-flush">
+
+                    <li class="list-group-item"><%=data.name,data.sys.country %></li>
+                    <li class="list-group-item"><%=data.main.temp %></li>
+                    <li class="list-group-item"><%=data.weather[0].description %></li>
+                    <li class="list-group-item"><%=data.weather[0].main %></li>
+                </ul>
+
+                <img src=<%=img %>>
+                <% }%>
+
+                <% if(error!==null){%>
+                <p><%=error %></p>
+                <% } %>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- bootstrap scripts -->
+
+</body>
+
+</html>
